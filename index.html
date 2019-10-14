@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <ul>
-        <li><a href="default.asp">Home</a></li>
-        <li><a href="signup.asp">Signup</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
-    </ul>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <h1></h1>
+    <title>Eksamensprojekt</title>
 </head>
 <body>
+<body>
+<form id="login-form" action="submit">
+    <fieldset>
+        <legend>
+            User Details
+        </legend>
+        <div>
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" placeholder="Username" required/>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required />
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+            Login Type
+        </legend>
+        <span>
+			<input id="register" type="radio" name="login_type" value="register" checked="checked">
+			<label for="register">Register</label>
+		</span>
+        <span>
+			<input id="login" type="radio" name="login_type" value="login">
+			<label for="login">Login</label>
+		</span>
+    </fieldset>
+    <input type="submit" value="Submit" />
+
+    <output name="result"></output>
+</form>
+
+<script src="User.js"></script>
 
 </body>
 </html>
