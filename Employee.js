@@ -1,11 +1,10 @@
 //Classes defined
 class Employee {
-constructor(employee_user, phone, department, yy, sex, email) {
-    this.employee_user = employee_user;
-    this.phone = phone;
+constructor(employee_username, password, department, yy, email) {
+    this.employee_user = employee_username;
+    this.password = password;
     this.department = department;
     this.yy = yy;
-    this.sex = sex;
     this.email = email;
     this.skills = [];
 }
@@ -13,13 +12,19 @@ constructor(employee_user, phone, department, yy, sex, email) {
 addNewSkill(skill){
   this.skills.push(skill);
 }
-
 }
+// function: Deletes from "skills" array
+deleteSkill(this.skills){
+  this.skills.slice(
+
+  )
+}
+
 //Employee Database
-var emp1 = new Employee("Simon", 12345678, "HR", 1999,"Male", "123@mail.dk");
-var emp2 = new Employee("Mads", 87654321,"IT", 1999, "Male", "1234@email.com");
-var emp3 = new Employee("Jessica", 252522525, "Sales",1998, "Female","Mail2@mail.dk");
-var emp4 = new Employee("Benjamin", 60504497,"IT", 1997, "Male","blabla@mail.dk");
+var emp1 = new Employee("Simon", 1234, "HR", 1999, "123@mail.dk");
+var emp2 = new Employee("Mads", 12345,"IT", 1999,  "1234@email.com");
+var emp3 = new Employee("Jessica", 54321, "Sales",1998, "Mail2@mail.dk");
+var emp4 = new Employee("Benjamin", 4321,"IT", 1997, "blabla@mail.dk");
 
 emp1.addNewSkill("IT", "Accounting");
 emp2.addNewSkill("Sales", "Frontend");
