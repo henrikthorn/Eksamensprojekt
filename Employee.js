@@ -29,8 +29,8 @@ deleteSkill(this.skills){
        employeeList.push (new Employee("Jessica", 54321, "Sales",1998, "Mail2@mail.dk",'1'));
        employeeList.push (new Employee("Benjamin", 4321,"IT", 1997, "blabla@mail.dk", '1'));
 
-       var employeeListString = JSON.stringify(employeeList)
-       localStorage.setItem('Employee', employeeListString)
+       var employeeListString = JSON.stringify(employeeList);
+       localStorage.setItem('Employee', employeeListString);
    } else {
        var employeeList = JSON.parse(localStorage.getItem('Employee'))
    }
