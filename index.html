@@ -5,43 +5,21 @@
     <title>Eksamensprojekt</title>
 </head>
 <body>
+</head>
 <body>
-<form id="login-form" action="submit">
-    <fieldset>
-        <legend>
-            User Details
-        </legend>
-        <div>
-            <label for="username">Username</label>
-            <input id="username" type="text" name="username" placeholder="Username" required/>
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" required />
-        </div>
-    </fieldset>
-    <fieldset>
-        <legend>
-            Login Type
-        </legend>
-        <span>
-			<input id="register" type="radio" name="login_type" value="register" checked="checked">
-			<label for="register">Register</label>
-		</span>
-        <span>
-			<input id="login" type="radio" name="login_type" value="login">
-			<label for="login">Login</label>
-		</span>
-    </fieldset>
-    <input type="submit" value="Submit" />
-
-    <output name="result"></output>
-</form>
-
+<div class="container">
+    <div class="main">
+        <h2>EPM</h2>
+        <form id="form_id" method="post" name="myform">
+            <label>User Name :</label>
+            <input type="text" name="username" id="username"/>
+            <label>Password :</label>
+            <input type="password" name="password" id="password"/>
+            <input type="button" value="Login" id="submit"/>
+        </form>
+    </div>
+    <script src="Employee.js"></script>
 <script src="User.js"></script>
-
+    <link rel="stylesheet" href="css/style.css"/>
 </body>
-
-<script src="Employee.js"></script>
-
 </html>
