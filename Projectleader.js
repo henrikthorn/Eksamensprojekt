@@ -1,6 +1,6 @@
 class Projectleader {
-    constructor (employee_user, email, phone, project, Level) {
-        this.employee_user = employee_user;
+    constructor (projectleader, email, phone, project, Level) {
+        this.projectleader = projectleader;
         this.email = email;
         this.phone = phone;
         this.project = project;
@@ -20,11 +20,9 @@ if(localStorage.getItem('Projectleader') == null) {
 
     var ProjectleaderlistString = JSON.stringify(Projectleaderlist)
         localStorage.setItem('Projectleader', ProjectleaderlistString)
-
     } else {
         var ProjectleaderlistString = JSON.parse(localStorage.getItem('Projectleader'))
     }
 
-
-console.log (Projectleaderlist.employee_user + " is project manager of: " + prl1.project + " contact info is: " + prl1.email + prl1.phone);
+console.log (Projectleaderlist.projectleader + " is project manager of: " + prl1.project + " contact info is: " + prl1.email + prl1.phone);
 

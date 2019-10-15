@@ -15,11 +15,6 @@ addNewSkill(skill){
 }
 }
 // function: Deletes from "skills" array
-deleteSkill(this.skills){
-  this.skills.slice(
-
-  )
-}
 
 //Employee Database
    if(localStorage.getItem('Employee') == null) {
