@@ -11,7 +11,7 @@ constructor(employee_username, password, department, yy, email, level) {
 }
 // function: Pushses new skill, in "Skills" array
 addNewSkill(skill){
-  this.skills.push(skill);
+        this.skills.push(skill);
 }
 }
 // function: Deletes from "skills" array
