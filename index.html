@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Eksamensprojekt</title>
+    <!-- <link rel="stylesheet" href="css/style.css"/> -->
 </head>
-<body>
-</head>
+
 <body>
 <div class="container">
     <div class="main">
         <h2>EPM</h2>
-        <form id="form_id" method="post" name="myform">
+        <form id="form_id">
             <label>User Name :</label>
-            <input type="text" name="username" id="username"/>
+            <input type="text" id="username" value=""/>
             <label>Password :</label>
-            <input type="password" name="password" id="password"/>
-            <input type="button" value="Login" id="submit"/>
+            <input type="password" id="password" value=""/>
+            <input type="button" value="Login" onclick="checkLogin()"/>
         </form>
     </div>
     <script src="Employee.js"></script>
-<script src="User.js"></script>
-    <link rel="stylesheet" href="css/style.css"/>
+    <script src="User.js"></script>
+
 </body>
+
 </html>
