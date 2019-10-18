@@ -3,31 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Eksamensprojekt</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="main">
-        <h2>Welcome to EPM!</h2>
-        <form id="form_id">
-            <div class="imgcontainer">
-                <img src="EPM.png" alt="Logo" class="logo">
-            </div>
-
-            <div class="container">
-                <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" id="username" value="">
-
-                <label for="password"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" id="password" value="">
-
-                <button type="button" value="Login" onclick="checkLogin()">Login</button>
-            </div>
-        </form>
+<h2>Welcome to EPM!</h2>
+<form id="form_id">
+    <div class="image">
+        <img src="EPM.png" alt="Logo" class="logo"><x></x>
     </div>
+
+    <div class="container">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="username" value="">
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="password" value="">
+
+        <button type="button" value="Login" onclick="checkLogin()">Login</button>
+    </div>
+</form>
+</div>
 </body>
-    <script src="Employee.js"></script>
-    <script src="User.js"></script>
+    <script src="../Javascript/Employee.js"></script>
+    <script src="../Javascript/User.js"></script>
 
 
 </html>

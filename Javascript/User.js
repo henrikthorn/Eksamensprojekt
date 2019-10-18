@@ -37,6 +37,7 @@ function checkLogin() {
         }
     }
 }
+console.log(employeeList)
 /*
 if (typeof user !== 'undefined'){
         if(user.level === 1){
