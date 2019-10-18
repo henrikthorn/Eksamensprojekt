@@ -24,5 +24,4 @@ if(localStorage.getItem('Projectleader') == null) {
         var ProjectleaderlistString = JSON.parse(localStorage.getItem('Projectleader'))
     }
 
-console.log (Projectleaderlist.projectleader + " is project manager of: " + prl1.project + " contact info is: " + prl1.email + prl1.phone);
 
