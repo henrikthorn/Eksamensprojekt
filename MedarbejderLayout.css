@@ -5,102 +5,60 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* Add a black background color to the top navigation */
-.topnav {
+/* Add a background color to the top navigation */
+ul {
     opacity: 0.7;
-    background-color: #e6e6e6;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    background-color: #e6e6e6;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+li {
     float: left;
     display: block;
     color: 	#404040;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 150%;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
     background-color: #ddd;
-    color: black;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
-    background-color: #e6e6e6;
-    color: white;
+li.dropdown {
+    display: inline-block;
 }
 
-/* Style the input container */
-.topnav .logout-container {
-    float: right;
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+.dropdown-content {
     display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
 }
-h1 {
-    color: white;
-    letter-spacing: 3px;
-    text-indent: 10px;
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
 
+.dropdown-content a:hover {background-color: #f1f1f1;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.dropdown:hover .dropdown-content {
+    display: block;
+}

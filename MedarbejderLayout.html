@@ -3,16 +3,23 @@
     <link rel="stylesheet" type="text/css" href="MedarbejderLayout.css">
 </head>
 <body>
-<div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-    <a href="#profil">Min Profil</a>
-    <a href="#indstillinger">Indstillinger</a>
-    <div class="logout-container">
-        <form action="/action_page.php">
-        </br>
-            <button type="logout">Log-out</button>
-        </form>
-    </div>
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Min Profil</a>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Instillinger</a>
+        <div class="dropdown-content">
+            <a href="#">Rediger oplysninger</a>
+            <a href="#">Tilf&oslash;j fagomr&aring;der</a>
+            <a href="#">Link 3</a>
+        </div>
+    </li>
+</ul>
 </div>
 <br/>
 <h1> Easy Project Management </h1>
