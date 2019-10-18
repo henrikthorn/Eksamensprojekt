@@ -1,5 +1,5 @@
 class Projectleader {
-    constructor (projectleader, email, phone, project, Level) {
+    constructor (projectleader, email, phone, project, level) {
         this.projectleader = projectleader;
         this.email = email;
         this.phone = phone;

@@ -6,7 +6,7 @@ this.passwordInput = document.getElementById("password");
 
 
 let existingEmployee = JSON.parse(localStorage.getItem('Employee'));
-let existingProjectleader = JSON.parse(localStorage.getItem('Projectleader'));
+
 var currentLogin = [];
 
  var attempt = 4; // Variable to count number of attempts.
@@ -23,15 +23,7 @@ function checkLogin() {
             console.log('virker');
             document.location = "Medarbejderside.html";
             return true;
-        } else if (usernameInput.value == existingProjectleader[i].projectleader && passwordInput.value == existingProjectleader[i].password) {
-            currentLogin.push({projectleader_username: usernameInput})
-            var IDStrings = JSON.stringify(currentLogin);
-            localStorage.setItem('currentProjectleader', IDStrings);
-            alert("Login successfully");
-            console.log('virker');
-            document.location = "Projektlederside.html";
-            return true;
-        } else
+        } else {
             console.log('virker ikke');
             attempt--;// Decrementing by one.
             alert("You have wrong attempt;");
@@ -43,6 +35,7 @@ function checkLogin() {
                 return false;
             }
         }
+    }
 }
 /*
 if (typeof user !== 'undefined'){
