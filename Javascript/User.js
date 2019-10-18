@@ -9,7 +9,7 @@ let existingEmployee = JSON.parse(localStorage.getItem('Employee'));
 
 var currentLogin = [];
 
- var attempt = 4; // Variable to count number of attempts.
+ var attempt = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
 
 function checkLogin() {
@@ -37,6 +37,7 @@ function checkLogin() {
         }
     }
 }
+console.log(employeeList)
 /*
 if (typeof user !== 'undefined'){
         if(user.level === 1){
