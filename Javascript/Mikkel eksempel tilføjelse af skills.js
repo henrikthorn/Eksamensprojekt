@@ -38,3 +38,13 @@ undefined
 console.log(emp2.employee_user + " is a " + emp2.yy + " year old consulting with skills in " + emp2.skills + " from department " + emp2.department);
 VM1171:1 Mikkel is a 1989 year old consulting with skills in Accounting from department Finans
 undefined
+
+// Eksempel på Employee skillpush
+
+emp1.addNewSkill("IT", "Accounting");
+emp2.addNewSkill("Sales", "Frontend");
+emp3.addNewSkill("Backend", "Projekt Management");
+emp4.addNewSkill("Accounting", "Sales");
+
+
+console.log(employeeList.employee_user + " with skills " +  emp1.skills);
