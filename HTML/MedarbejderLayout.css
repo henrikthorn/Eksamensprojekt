@@ -1,7 +1,7 @@
 @font-face{
 }
 body{
-    background-image:url("bg.jpg");
+    background-image:url();
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -74,16 +74,18 @@ button:hover, a:hover {
 }
 <!-- Profile card -->
 .h2 {
-    float: left;
+    float: right;
     margin: 10px;
 }
+
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 10px;
+    margin-right: 50%;
     text-align: center;
     font-family: arial;
-    float: left;
-    max-width: 15%;
+    float: right;
+    max-width: 20%;
 }
 
 .title {
