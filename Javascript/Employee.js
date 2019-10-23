@@ -4,7 +4,6 @@ constructor(employee_username, password, department, yy, email, level) {
     this.employee_user = employee_username;
     this.password = password;
     this.department = department;
-    this.yy = yy;
     this.email = email;
     this.skills = [];
     this.level = level;
@@ -30,10 +29,44 @@ addNewSkill(skill){
        var employeeList = JSON.parse(localStorage.getItem('Employee'))
    }
 
-   // forsøg på at sætte vores liste ind i en HTML tabel
-   var employeeOutput = document.getElementsByClassName(Employee)
-    employeeOutput.innerHTML = Employee;
+    function buildTable(data) {
+        let table = document.createElement("table");
+        let fields = Object.keys(data[0]);
+        let headRow = document.createElement("tr");
+        fields.forEach(function(field) {
+            let headCell = document.createElement("th");
+            headCell.textContent = field;
+            headRow.appendChild(headCell);
+        });
+        table.appendChild(headRow);
+        data.forEach(function(object) {
+            let row = document.createElement("tr");
+            fields.forEach(function(field) {
+                let cell = document.createElement("td");
+                cell.textContent = object[field];
+                if (typeof object[field] == "number") {
+                    cell.style.textAlign = "right";
+                }
+                row.appendChild(cell);
+            });
+            table.appendChild(row);
+        });
+return table;
+    }
+    document.querySelector(Employees)
+        .appendChild(buildTable(employeeList));
 
-   console.log(Employee1);
+   //var employeeOutput = document.getElementsByClassName(Employee)
+    //employeeOutput.innerHTML = Employee;
 
+
+
+
+   // lav en HTML side med <div id="employees"> ligesom mountains
+
+    // indsæt buildTable function i javascript
+
+    // Kald document.querySelector for employees og funktionen buildTable(employeeList) i stedet for buildTable(MOUNTAINS)
+
+    // Læs kapitel 14 i bogen om DOM
 
