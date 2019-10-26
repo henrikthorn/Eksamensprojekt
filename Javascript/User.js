@@ -1,5 +1,4 @@
 
-
 this.usernameInput = document.getElementById("username");
 this.passwordInput = document.getElementById("password");
 
