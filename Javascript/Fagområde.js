@@ -10,3 +10,8 @@ class skillset {
         this.Communication = Communication;
     }
 }
+if(localStorage.getItem("skills") == null) {
+    var skillssetList = [];
+
+    skillssetList.push(new skills());
+}

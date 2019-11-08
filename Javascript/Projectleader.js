@@ -1,22 +1,20 @@
 class Projectleader {
-    constructor (projectleader, email, phone, project, level) {
-        this.projectleader = projectleader;
+    constructor (userName, password, email, phone, level) {
+        this.username = userName;
+        this.password = passWord;
         this.email = email;
         this.phone = phone;
-        this.project = project;
         this.level = level;
     }
     }
 
-//Database over projektleder
+// Project leader Localstorage
 
 if(localStorage.getItem('Projectleader') == null) {
     var Projectleaderlist = [];
 
-    Projectleaderlist.push (new Projectleader("Oliver", "ms@cbs.dk", 12345678, "Digitalization", '2'));
-    Projectleaderlist.push (new Projectleader("Sara", "sm@cbs.dk",987654321, "Storage Count", '2'));
-    Projectleaderlist.push (new Projectleader("Kristoffer", "ks@cbs.dk", 124535687,"Sales System", '2'));
-    Projectleaderlist.push (new Projectleader("Nicklas", "ns@cbs.dk",78654321, "HR Leadership", '2'));
+    Projectleaderlist.push (new Projectleader("Oliver", "1234", "ms@cbs.dk", "11223344", '2'));
+    Projectleaderlist.push (new Projectleader("Kristoffer", "4321", "ks@cbs.dk","22334455", '2'));
 
     var ProjectleaderlistString = JSON.stringify(Projectleaderlist)
         localStorage.setItem('Projectleader', ProjectleaderlistString)

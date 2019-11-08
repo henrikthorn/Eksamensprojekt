@@ -2,8 +2,7 @@
 this.usernameInput = document.getElementById("username");
 this.passwordInput = document.getElementById("password");
 
-
-
+let existingLevel = JSON.parse(localStorage.getItem("level"));
 let existingEmployee = JSON.parse(localStorage.getItem('Employee'));
 
 var currentLogin = [];
@@ -20,14 +19,18 @@ function checkLogin() {
             localStorage.setItem('currentEmployee', IDString);
             alert("Login successfully");
             console.log('virker');
-            document.location = "Medarbejderside.html";
+            if (existingLevel == 2){
+                document.location = "employeeList.html";
+                } else{
+                 document.location = "Medarbejderside.html";
+            }
             return true;
         } else {
             console.log('virker ikke');
             attempt--;// Decrementing by one.
             alert("You have wrong attempt;");
 // Disabling fields after 3 attempts.
-            if (attempt == 0) {
+            if (attempt === 0) {
                 document.getElementById("username").disabled = true;
                 document.getElementById("password").disabled = true;
                 document.getElementById("submit").disabled = true;
@@ -36,21 +39,6 @@ function checkLogin() {
         }
     }
 }
-console.log(employeeList)
-/*
-if (typeof user !== 'undefined'){
-        if(user.level === 1){
-            // go to Level 1 page
-        }else if(user.level ===2){
-            // got to Level 2 page
-        }
-    }else{
-        // display "invalid password"
-    }
-}else{
-    // display "invalid username
-}*/
-
 
 
 

@@ -1,5 +1,7 @@
 //Classes defined
-
+/*BHVN: Koden skal åbne en klasse (objekt) orienteret tilgang, nedestående definere vores klasse "Employee", som vi bygger ved hjælp af en
+constructer som er det vores klasse bygger på
+ */
 class Employee {
     constructor(employee_username, password, department, yy, email, level) {
         this.employee_user = employee_username;

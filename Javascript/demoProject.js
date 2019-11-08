@@ -1,4 +1,5 @@
-class Project {
+/*class Project {
+ */
     constructor (ID, projectName, Members, Date) {
         this.ID = []
         this.projectName = Name
@@ -20,6 +21,5 @@ if(localStorage.getItem('Project') == null) {
     localStorage.setItem('Project', ProjectListString)
 } else {
     var ProjectListString = JSON.parse(localStorage.getItem('Project'))
-}
 }
 
