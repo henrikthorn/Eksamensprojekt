@@ -3,13 +3,13 @@
 constructer som er det vores klasse bygger på
  */
 class Employee {
-    constructor(employee_username, password, department, yy, email, level) {
-        this.employee_user = employee_username;
-        this.password = password;
+    constructor(name, gender, department, yy, email,) {
+        this.name = name;
+        this.gender = gender;
         this.department = department;
         this.email = email;
         this.skills = [];
-        this.level = level;
+
     }
 
     // function: Pushses new skill, in "Skills" array
@@ -21,15 +21,16 @@ class Employee {
 //Employee Database "Localstorage"
 if(localStorage.getItem('Employee') == null) {
     var employeeList = [];
-    employeeList.push (new Employee("Simon", 1234, "HR", 1999, "123@mail.dk", '1'));
-    employeeList.push (new Employee("Mads", 12345,"IT", 1999,  "1234@email.com", '1'));
-    employeeList.push (new Employee("Jessica", 54321, "Sales",1998, "Mail2@mail.dk",'1'));
-    employeeList.push (new Employee("Benjamin", 4321,"IT", 1997, "blabla@mail.dk", '1'));
+    employeeList.push (new Employee("Simon", "Male", "HR", 1999, "123@mail.dk"));
+    employeeList.push (new Employee("Mads", "Male","IT", 1999,  "1234@email.com"));
+    employeeList.push (new Employee("Jessica", "Female", "Sales",1998, "Mail2@mail.dk"));
+    employeeList.push (new Employee("Benjamin", "Male","IT", 1997, "blabla@mail.dk"));
 
     var employeeListString = JSON.stringify(employeeList);
-    localStorage.setItem('Employee', employeeListString)
+    localStorage.setItem('Employee', employeeListString);
+    document.querySelector('#employees').appendChild(buildTable(employeeList));
 } else {
-    var employeeList = JSON.parse(localStorage.getItem('Employee'))
+    var employeeList = JSON.parse(localStorage.getItem('Employee'));
 }
 //Function creates table for employeeLise
 function buildTable(data) {
@@ -61,5 +62,4 @@ function buildTable(data) {
     });
     return table;
 }
-
 document.querySelector('#employees').appendChild(buildTable(employeeList));
