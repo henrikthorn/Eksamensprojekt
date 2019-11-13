@@ -20,6 +20,5 @@ if(localStorage.getItem("userLogin") == null){
     var userLoginstring = JSON.stringify(userLogins)
     localStorage.setItem("userLogin", userLoginstring)
 } else {
-
+	var userLogin = JSON.parse(localStorage.getItem("User"))
 }
-var userLogin = JSON.parse(localStorage.getItem("User"))
